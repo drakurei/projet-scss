@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet SCSS — Variables & Mixins</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner container">
+      <span class="logo">MonSite 🎨</span>
+      <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Fonctionnalités</a>
+        <a href="#">Équipe</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Bienvenue sur notre projet SCSS</h1>
+    <p>Ce projet illustre l'utilisation des variables et des mixins pour structurer et réutiliser vos styles efficacement.</p>
+    <a href="#features" class="btn">Découvrir →</a>
+  </section>
+
+  <!-- FONCTIONNALITÉS -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Pourquoi utiliser SCSS ?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Variables</h3>
+          <p>Centralisez vos couleurs, tailles et espacements dans <code>_variables.scss</code> pour une maintenance simplifiée.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔁</div>
+          <h3>Mixins</h3>
+          <p>Réutilisez des blocs de CSS avec <code>@include</code>. Le mixin <code>flex-container()</code> gère toute la disposition flexbox.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗂️</div>
+          <h3>Partials</h3>
+          <p>Découpez votre SCSS en fichiers partiaux (<code>_variables</code>, <code>_mixins</code>) et importez-les dans <code>style.scss</code>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉQUIPE -->
+  <section class="team">
+    <div class="container">
+      <h2>Notre équipe</h2>
+      <div class="team-members">
+        <div class="member">
+          <div class="avatar">AL</div>
+          <span class="name">Alice L.</span>
+          <span class="role">Lead Dev</span>
+        </div>
+        <div class="member">
+          <div class="avatar">BM</div>
+          <span class="name">Bob M.</span>
+          <span class="role">Designer</span>
+        </div>
+        <div class="member">
+          <div class="avatar">CR</div>
+          <span class="name">Clara R.</span>
+          <span class="role">Intégratrice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner container">
+      <span class="footer-copy">© 2026 MonSite — Exercice SCSS</span>
+      <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">Documentation</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

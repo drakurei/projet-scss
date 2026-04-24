@@ -1,0 +1,41 @@
+// ============================================================
+// _mixins.scss
+// Fichier des mixins réutilisables
+// ============================================================
+
+@use 'variables' as *;
+
+// --- Mixin : flex-container ---
+// Permet de configurer un conteneur flexbox facilement.
+//
+// Paramètres :
+//   $direction   → row | column           (défaut : row)
+//   $alignement  → center | flex-start | flex-end  (défaut : center)
+//   $espacement  → space-between | space-around | flex-start | center (défaut : space-between)
+
+@mixin flex-container(
+  $direction: row,
+  $alignement: center,
+  $espacement: space-between
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $alignement;
+  justify-content: $espacement;
+  flex-wrap: wrap;
+}
+
+// --- Mixin : responsive ---
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// --- Mixin : carte ---
+@mixin carte {
+  background-color: $couleur-blanc;
+  border-radius: $rayon-bordure;
+  box-shadow: $ombre-carte;
+  padding: $espacement-interne * 1.5;
+}

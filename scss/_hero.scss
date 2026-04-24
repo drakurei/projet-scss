@@ -1,0 +1,44 @@
+// ============================================================
+// _hero.scss — Section hero / bannière principale
+// ============================================================
+
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+  @include flex-container(column, center, center);
+  min-height: 320px;
+  padding: $espacement-sections $espacement-interne;
+  text-align: center;
+  background: linear-gradient(135deg, color.adjust($couleur-principale, $lightness: 30%), $couleur-fond);
+
+  h1 {
+    font-size: $taille-titre;
+    color: $couleur-principale;
+    margin-bottom: $espacement-interne;
+  }
+
+  p {
+    font-size: $taille-sous-titre;
+    max-width: 600px;
+    color: color.adjust($couleur-texte, $lightness: 20%);
+    margin-bottom: $espacement-elements;
+  }
+
+  .btn {
+    background-color: $couleur-principale;
+    color: $couleur-blanc;
+    padding: 0.75rem 2rem;
+    border-radius: $rayon-bordure;
+    font-size: $taille-police-principale;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: color.adjust($couleur-principale, $lightness: -10%);
+      text-decoration: none;
+    }
+  }
+}

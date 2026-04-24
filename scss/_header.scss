@@ -1,0 +1,35 @@
+// ============================================================
+// _header.scss — En-tête du site
+// ============================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+header {
+  background-color: $couleur-principale;
+  color: $couleur-blanc;
+  padding: $espacement-interne $espacement-elements;
+
+  .header-inner {
+    @include flex-container(row, center, space-between);
+
+    .logo {
+      font-size: $taille-sous-titre;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    nav {
+      @include flex-container(row, center, space-around);
+      gap: $espacement-elements;
+
+      a {
+        color: $couleur-blanc;
+        font-size: $taille-police-principale;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+        &:hover { opacity: 1; text-decoration: none; }
+      }
+    }
+  }
+}

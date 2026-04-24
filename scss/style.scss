@@ -1,0 +1,12 @@
+// ============================================================
+// style.scss — Point d'entrée principal
+// ============================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'base';
+@use 'header';
+@use 'hero';
+@use 'features';
+@use 'team';
+@use 'footer';

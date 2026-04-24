@@ -1,0 +1,51 @@
+// ============================================================
+// _footer.scss — Pied de page & responsive mobile
+// ============================================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+footer {
+  background-color: $couleur-texte;
+  color: $couleur-blanc;
+  padding: $espacement-elements $espacement-interne;
+
+  .footer-inner {
+    @include flex-container(row, center, space-between);
+
+    .footer-copy {
+      font-size: $taille-police-principale;
+      opacity: 0.7;
+    }
+
+    .footer-links {
+      @include flex-container(row, center, flex-end);
+      gap: $espacement-interne;
+
+      a {
+        color: $couleur-blanc;
+        font-size: $taille-police-principale;
+        opacity: 0.7;
+        &:hover { opacity: 1; }
+      }
+    }
+  }
+}
+
+// ============================================================
+// RESPONSIVE (mobile)
+// ============================================================
+
+@include responsive($breakpoint-mobile) {
+  header .header-inner {
+    @include flex-container(column, center, center);
+    gap: $espacement-interne;
+  }
+  .features .features-grid { @include flex-container(column, stretch, flex-start); }
+  .team .team-members { @include flex-container(column, center, center); }
+  footer .footer-inner {
+    @include flex-container(column, center, center);
+    gap: $espacement-interne;
+    text-align: center;
+  }
+}

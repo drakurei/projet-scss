@@ -1,0 +1,46 @@
+// ============================================================
+// _team.scss — Section équipe
+// ============================================================
+
+@use 'sass:color';
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.team {
+  background-color: color.adjust($couleur-fond, $lightness: -2%);
+  padding: $espacement-sections $espacement-interne;
+
+  h2 {
+    font-size: $taille-sous-titre;
+    text-align: center;
+    margin-bottom: $espacement-elements;
+    color: $couleur-principale;
+  }
+
+  .team-members {
+    @include flex-container(row, center, space-around);
+    gap: $espacement-elements;
+
+    .member {
+      @include carte;
+      @include flex-container(column, center, center);
+      gap: 0.5rem;
+      flex: 0 1 200px;
+      text-align: center;
+
+      .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: $couleur-principale;
+        @include flex-container(row, center, center);
+        color: $couleur-blanc;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .name { font-weight: 700; color: $couleur-texte; }
+      .role { font-size: 0.875rem; color: $couleur-principale; }
+    }
+  }
+}

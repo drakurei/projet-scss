@@ -1,0 +1,29 @@
+// ============================================================
+// _variables.scss
+// Fichier de centralisation des variables réutilisables
+// ============================================================
+
+// --- Couleurs ---
+$couleur-principale: #3a86ff;       // Couleur bleue principale
+$couleur-secondaire: #ff6b6b;       // Couleur d'accent (rouge-corail)
+$couleur-fond: #f8f9fa;             // Fond clair
+$couleur-texte: #2d3436;            // Texte sombre
+$couleur-blanc: #ffffff;
+
+// --- Typographie ---
+$taille-police-principale: 1rem;    // 16px — taille de base
+$taille-titre: 2rem;                // 32px — pour les titres h1
+$taille-sous-titre: 1.25rem;        // 20px — pour les sous-titres h2/h3
+$famille-police: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// --- Espacements ---
+$espacement-sections: 3rem;         // Espace vertical entre sections
+$espacement-elements: 1.5rem;       // Espace entre éléments d'une section
+$espacement-interne: 1rem;          // Padding interne des composants
+
+// --- Bordures & Coins ---
+$rayon-bordure: 8px;
+$ombre-carte: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+// --- Breakpoints ---
+$breakpoint-mobile: 768px;
